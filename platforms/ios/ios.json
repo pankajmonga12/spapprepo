@@ -1,0 +1,65 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"OneSignalPush\"><param name=\"ios-package\" value=\"OneSignalPush\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "UIBackgroundModes": [
+                        {
+                            "xml": "<array><string>remote-notification</string></array>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.sarkari.pariksha"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.sarkari.pariksha"
+        },
+        "org.loicknuchel.cordova.deviceaccounts": {
+            "PACKAGE_NAME": "com.sarkari.pariksha"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+            "id": "onesignal-cordova-plugin.OneSignal",
+            "pluginId": "onesignal-cordova-plugin",
+            "clobbers": [
+                "OneSignal"
+            ]
+        },
+        {
+            "file": "plugins/org.loicknuchel.cordova.deviceaccounts/www/DeviceAccounts.js",
+            "id": "org.loicknuchel.cordova.deviceaccounts.DeviceAccounts",
+            "pluginId": "org.loicknuchel.cordova.deviceaccounts",
+            "clobbers": [
+                "plugins.DeviceAccounts"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.0.0",
+        "onesignal-cordova-plugin": "1.12.4",
+        "org.loicknuchel.cordova.deviceaccounts": "0.0.1"
+    }
+}

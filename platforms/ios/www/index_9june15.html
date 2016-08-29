@@ -1,0 +1,90 @@
+<!DOCTYPE HTML> <html> <head> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Login</title>
+ 
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	  <!--<link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />--> 
+	 <link rel="stylesheet" href="css/index.css" /> 
+	 	 <link rel="stylesheet" href="css/mobile.css" /> 
+	 
+	 
+	 
+	   
+	    <!--for production  uncomment this min versions --> 
+	    <script src="jquery.mobile/jquery-1.9.1.min.js"></script>
+	 <script src="jquery.mobile/jquery.mobile-1.3.1.min.js"></script>
+	 
+	 <!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	 <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>-->
+	   
+	
+	 
+	  <script type="text/javascript">
+	  
+	   if (navigator.userAgent.indexOf("Android") > 0)
+       {
+        document.write('<script charset="utf-8" src="android/cordova-2.7.0.js"><\/script>');
+    	}
+    	else if (navigator.userAgent.indexOf("iPhone") > 0 || navigator.userAgent.indexOf("iPad") > 0 || navigator.userAgent.indexOf("iPod") > 0)
+        
+        {
+        document.write('<script charset="utf-8" src="ios/cordova.ios.js"><\/script>');
+        }
+         else if(navigator.userAgent.match(/BlackBerry/i)) 
+	    {
+	     document.write('<script charset="utf-8" src="blackberry/cordova.blackberry.js"><\/script>');
+	   
+	    }
+       else if(navigator.userAgent.match(/IEMobile/i))
+   	 	{
+    	document.write('<script charset="utf-8" src="windows/cordova-2.7.0.js"><\/script>');
+        } 
+    else
+    {
+     document.write('<script charset="utf-8" src="js/cordova-2.7.0.js"><\/script>');
+    }
+	
+    	  </script>
+	 
+	
+  
+ <script type="text/javascript" charset="utf-8" src="js/index.js"></script> 
+ <script src="highcharts/js/highcharts.js"></script>
+<script src="highcharts/js/modules/exporting.js"></script>
+ </head>
+  <body>
+<div data-role="page" id="mainPage" data-theme="b">
+		
+		<div data-role="header" id="header" data-theme="f" style="text-align:center;">
+		 <img src="images/logo.png"> 
+		</div>
+		
+ 		<div  data-role="content" class="ui-content" role="main">
+		
+			<form id="frmLogin" class="ui-body ui-body-d ui-corner-all">
+	           <div id="msg"></div>  
+	               
+	                <fieldset>
+	          
+	                    <div data-role="fieldcontain">
+	                       <input type="text" value="testuser" name="user_name" id="user_name" placeholder="User Name"/>
+	                    </div> 
+	                     <div data-role="fieldcontain">
+	                       <input type="password" value="12345678" name="password" id="password" placeholder="Password"/>
+	                    </div>   
+	                  
+	                   <input  class="tt_btn" type="button" name="submit_login" id="submit_login" style="color: blue;" value="Login">
+	                   <input  class="tt_btn" type="button" name="btn_login" id="btn_login" style="color: blue;" value="Login">
+	                   <input  class="tt_btn" type="button" name="btn_regis" id="submit_regis" style="color: blue;" value="Register">
+	                   <input  class="tt_btn" type="button" name="btn_search_exam" id="btn_search_exam" style="color: blue;" value="Search Exam">
+	                    
+	                 </fieldset>
+	                    
+	             
+	         </form>
+	    </div>
+		
+</div>
+  
+</body>
+</html>
